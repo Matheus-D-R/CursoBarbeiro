@@ -24,9 +24,8 @@ const STEPS = [
 ];
 
 export const HowItWorks: React.FC = () => {
-  const scrollToOffer = () => {
-    const element = document.querySelector(CHECKOUT_LINK);
-    if (element) element.scrollIntoView({ behavior: 'smooth' });
+  const handleCheckout = () => {
+    window.open(CHECKOUT_LINK, '_blank');
   };
 
   return (
@@ -81,7 +80,7 @@ export const HowItWorks: React.FC = () => {
 
         {/* CTA Button */}
         <div className="text-center">
-          <Button onClick={scrollToOffer} className="md:px-12 md:py-5 text-lg">
+          <Button onClick={handleCheckout} className="md:px-12 md:py-5 text-lg">
             SIM, QUERO ME TORNAR ALUNO TAMBÉM!
           </Button>
         </div>

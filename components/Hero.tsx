@@ -4,9 +4,8 @@ import { Scissors } from 'lucide-react';
 import { CHECKOUT_LINK } from '../constants';
 
 export const Hero: React.FC = () => {
-  const scrollToOffer = () => {
-    const element = document.querySelector(CHECKOUT_LINK);
-    if (element) element.scrollIntoView({ behavior: 'smooth' });
+  const handleCheckout = () => {
+    window.open(CHECKOUT_LINK, '_blank');
   };
 
   return (
@@ -30,7 +29,7 @@ export const Hero: React.FC = () => {
           Chegue a faturar entre <span className="text-yellow-500 font-bold">R$ 3.100,00 à R$ 8.000,00</span> por mês no mercado que mais cresce no Brasil.
         </p>
 
-        <Button onClick={scrollToOffer} className="animate-bounce-slow">
+        <Button onClick={handleCheckout} className="animate-bounce-slow">
           QUERO ME TORNAR BARBEIRO AGORA
         </Button>
       </div>

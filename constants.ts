@@ -44,4 +44,4 @@ export const STUDENT_RESULTS = [
   "https://fabricabarbeiros3.online/wp/wp-content/uploads/2024/07/13.jpeg"
 ];
 
-export const CHECKOUT_LINK = "#offer-section"; // In a real app, this would be the payment gateway URL
+export const CHECKOUT_LINK = "https://pay.kiwify.com.br/plHiLh6?afid=cF1qLmsD";

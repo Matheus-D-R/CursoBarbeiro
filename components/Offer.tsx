@@ -5,10 +5,8 @@ import { AlertTriangle, CheckCircle, CreditCard } from 'lucide-react';
 import { CHECKOUT_LINK } from '../constants';
 
 export const Offer: React.FC = () => {
-  const scrollToTop = () => {
-    // In a real scenario, this button goes to checkout. 
-    // For demo purposes, we log or scroll.
-    console.log("Redirecting to checkout...");
+  const handleCheckout = () => {
+    window.open(CHECKOUT_LINK, '_blank');
   };
 
   return (
@@ -45,7 +43,7 @@ export const Offer: React.FC = () => {
              <Countdown />
           </div>
 
-          <Button onClick={scrollToTop} fullWidth className="text-xl md:text-2xl py-6 animate-pulse hover:animate-none">
+          <Button onClick={handleCheckout} fullWidth className="text-xl md:text-2xl py-6 animate-pulse hover:animate-none">
             GARANTIR MINHA VAGA AGORA
           </Button>
 
