@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { Hero } from './components/Hero';
 import { Curriculum } from './components/Curriculum';
 import { HowItWorks } from './components/HowItWorks';
@@ -13,6 +13,13 @@ import { Guarantee } from './components/Guarantee';
 import { Footer } from './components/Footer';
 
 function App() {
+
+  useEffect(() => {
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'PageView');
+    }
+  }, []);
+
   return (
     <main className="min-h-screen bg-slate-950 font-inter antialiased">
       <Hero />
